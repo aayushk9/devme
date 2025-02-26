@@ -11,10 +11,10 @@ import './App.css'
 
 function App() {
     return (
-       <div>
+       <div className='bg-black text-center min-h-screen w-full'>
         <Intro/>
         <About/>
-        <Edu/>
+        <Edu/> 
         <Projects/>
         <Blogs/>
         <Skills/>
