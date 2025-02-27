@@ -28,40 +28,34 @@ const projects = [
 export function Projects() {
    return (
       <section className="py-10 text-white text-center">
-         <div className="text-center mb-6">
-            <span className="text-white">My projects</span>
-            <p className="text-white">Here is some cool stuff i have built</p>
+         <div className="text-center max-w-[600px] mx-auto text-left mt-10">
+            <h2 className="text-white text-2xl font-bold">Projects</h2>
+            <p className="text-gray-400 text-base">I love building cool stuff. Here are some of the projects</p>
          </div>
 
-         <div className="grid md:grid-cols-2 gap-6 px-4 max-w-5xl mx-auto">
+         <div className="mt-10 grid grid-cols-1 md:grid-cols-2">
             {projects.map((project, index) => (
-               <div style={{
-                  border: "1px solid oklch(0.21 0.006 285.885)",
-                  borderRadius: "12px",
-                  padding: "16px"
-               }} key={index} className="relative group bg-black p-5 rounded-2xl shadow-lg hover:shadow-2xl transition rounded-xl">
+               <div
 
-                  <a href={project.website} target="_blank" rel="noopener noreferrer"
-                     className="absolute inset-0 top-0 h-1/2 bg-opacity-0 group-hover:bg-opacity-20 transition rounded-t-2xl text-white">
+                  key={index}
+                  className="bg-black p-5 rounded-2xl shadow-lg hover:shadow-2xl transition w-full max-w-[400px] mx-auto min-h-[400px]"
+               >
+                  <a href={project.website} target="_blank" rel="noopener noreferrer">
+                     <img src={project.image}
+                        alt={project.title}
+                        className="w-full h-[200px] object-cover rounded-t-2xl" />
                   </a>
 
-                  <img src={project.image} className="w-full rounded-xl"/>
-
                   <div className="mt-4">
-                     <h3 className="text-xl font-bold">{project.title}</h3>
+                     <h3 className="text-xl font-bold text-white">{project.title}</h3>
                      <p className="text-gray-400 text-sm">{project.date}</p>
-                     <p className="text-gray-300 mt-2">{project.description}</p>
+                     <p className="text-gray-300 mt-1">{project.description}</p>
 
                      <div className="mt-3 flex flex-wrap gap-2">
-                        {project.techStack.map((tech, i) => (
-                           <span key={i} className="bg-gray-800 px-2 py-1 rounded-full text-xs">{tech}</span>
+                        {project.techStack.map((tech, key) => (
+                           <span key={key} className="bg-gray-800 px-2 py-1 rounded-full text-xs text-white">{tech}</span>
                         ))}
-                  </div>
-
-                     <a href={project.website} target="_blank" rel="noopener noreferrer"
-                        className="mt-3 inline-block text-sm text-white bg-gray-700 px-3 py-1 rounded-full hover:bg-gray-600 transition">
-                        Website
-                     </a>
+                     </div>
                   </div>
                </div>
             ))}

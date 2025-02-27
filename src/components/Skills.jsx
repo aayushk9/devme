@@ -1,13 +1,14 @@
 export function Skills(){
   return (
-    <div>
-        <h2 className="text-white text-center">skills</h2>
-        <div className="flex space-x-4 justify-center m-8">
-        <span className="font-sans bg-white text-black  rounded-md px-2 py-1">React.js</span>
-        <span className="bg-white text-black rounded-md px-2 py-1">React.js</span>
-        <span className="bg-white text-black rounded-md px-2 py-1">React.js</span>
-        <span className="bg-white text-black rounded-md px-2 py-1">React.js</span>
-        <span className="bg-white text-black rounded-md px-2 py-1">React.js</span>
+    <div className="max-w-[600px] mx-auto text-left mt-5">
+        <h2 className="text-white text-2xl font-bold">Skills</h2>
+        <div className="flex space-x-4 justify-center m-8 ml-60 mt-4 h-8 w-8">
+        <span className="text-bold bg-white text-black rounded-md px-2 py-1 hover:bg-gray-300">React</span>
+        <span className="bg-white text-bold text-black rounded-md px-2 py-1 hover:bg-gray-300">Next.js</span>
+        <span className="bg-white text-bold text-black rounded-md px-2 py-1 hover:bg-gray-300">Javascript</span>
+        <span className="bg-white text-bold text-black rounded-md px-2 py-1 hover:bg-gray-300">Typescript</span>
+        <span className="bg-white text-bold text-black rounded-md px-2 py-1 hover:bg-gray-300">Node.js</span>
+        <span className="bg-white text-bold text-black rounded-md px-2 py-1 hover:bg-gray-300">Python</span>
         </div>
     </div>
   )

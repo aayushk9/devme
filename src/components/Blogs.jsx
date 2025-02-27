@@ -37,7 +37,7 @@ export function Blogs (){
                 <a href={blog.website}  className="absolute inset-0 top-0 h-1/2 bg-opacity-0 group-hover:bg-opacity-20 transition rounded-t-2xl text-white">
                     
                 </a>
-                <img src={blog.image || "/bigbrain.png"} className="w-full rounded-xl"></img>
+                <img src={blog.image} className="w-full rounded-xl"></img>
                 <p>{blog.title}</p>
                 <p>{blog.description}</p>  
               </div>

@@ -1,6 +1,6 @@
 export function About() {
   return (
-    <div className="max-w-[600px] mx-auto text-left">
+    <div className="max-w-[600px] mx-auto text-left text-wrap">
       <h2 className="text-white text-2xl font-bold">About</h2>
       <p className="text-gray-400 py-1 text-base mb-2">
         long story short; full stack engineer, crypto guy
@@ -16,7 +16,7 @@ export function About() {
           rel="noopener noreferrer" 
           className="font-bold text-white hover:text-blue-400 ml-2"
         >
-          x
+          x.com
         </a>
       </p> 
     </div>
