@@ -1,8 +1,8 @@
 import { Intro } from './components/Intro'
-import { About} from './components/About'
-import { Edu } from './components/Edu'   
+import { About } from './components/About'
+import { Edu } from './components/Edu'
 import { Projects } from './components/Projects'
-import { Blogs } from './components/Blogs' 
+import { Blogs } from './components/Blogs'
 import { Skills } from './components/Skills'
 import { Socials } from './components/Socials'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
@@ -26,7 +26,12 @@ function App() {
             </>
           }
         ></Route>
-        <Route path='/blogs' element={<Blogs/>}></Route>
+        <Route path='/blogs' element={
+          <>
+          <Blogs/>
+          <Socials/>
+          </>
+        }></Route>
       </Routes>
     </BrowserRouter>
   )
