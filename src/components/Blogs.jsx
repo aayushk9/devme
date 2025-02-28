@@ -1,48 +1,40 @@
-const blogs =[
+const blogs = [
     {
         website: "https://aayushk.hashnode.dev/computer-networks-osi-model-cookies",
-        image: "/bigbrain.png",
         title: "Computer Networks, OSI Model, Cookies",
-        description: "Learn cn, osi model, cookies and all about how internet evolved back in the day"
-    }, 
+        date: "Jan 4 2024"
+    },
     {
         website: "https://aayushk.hashnode.dev/an-update-on-my-tech-journey",
-        image: "/logo.png",
         title: "An update on my tech journey",
-        description: "Hello there, In this post I'm going to reflect on my tech journey."   
-    }, 
+        date: "April 20, 2023"
+    },
     {
         website: "https://www.geeksforgeeks.org/how-to-build-a-restful-api-using-node-express-and-mongodb/?itm_source=auth&itm_medium=contributions&itm_campaign=articles",
-        image: "/logo.png",
         title: "Rest APIs using node.js, express and mongodb",
-        description: "This article guides developers through the process of creating a RESTful API using Node.js, Express.js, and MongoDB"
-    }, 
+        date: "July 24, 2024"
+    },
     {
         website: "https://www.geeksforgeeks.org/pagination-using-node-mongo-express-js-and-ejs/?itm_source=auth&itm_medium=contributions&itm_campaign=articles",
-        image: "/logo.png",
         title: "Pagination using node.js, express and mongodb",
-        description: "Implement pagination in your web application using Node.js, MongoDB, Express and EJS for dynamic HTML rendering"
+        date: "March 27, 2024"
     }
 ]
 
-export function Blogs (){
+export function Blogs() {
     return (
-       <section className="text-center text-white">
-          <div>
-            <h2>Blogs</h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 px-4 max-w-5xl mx-auto">
-           {blogs.map((blog, key) => (
-              <div key={key} className="relative group bg-black p-5 rounded-2xl shadow-lg hover:shadow-2xl transition border-solid">
-                <a href={blog.website}  className="absolute inset-0 top-0 h-1/2 bg-opacity-0 group-hover:bg-opacity-20 transition rounded-t-2xl text-white">
-                    
-                </a>
-                <img src={blog.image} className="w-full rounded-xl"></img>
-                <p>{blog.title}</p>
-                <p>{blog.description}</p>  
-              </div>
-           ))}
-          </div>  
-       </section>
+        <section className="max-w-[600px] mx-auto text-left mt-10">
+            <h2 className="text-white text-2xl font-semibold">blog</h2>
+            <div className="grid md:grid-cols-1 gap-4 px-4 max-w-5xl mx-auto mt-6">
+                {blogs.map((blog, index) => (
+                    <div key={index} className="space-y-1">
+                        <a href={blog.website} className="block">
+                            <p className="text-white text-sm">{blog.title}</p>
+                        </a>
+                        <p className="text-gray-400 text-xs">{blog.date}</p>
+                    </div>
+                ))}
+            </div>
+        </section>
     )
 }  
