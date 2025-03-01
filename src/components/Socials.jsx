@@ -1,28 +1,38 @@
-import { Home, FileText, Github, Linkedin, X, Mail, Moon } from "lucide-react";
+import { Home, FileText, Github, Linkedin, X, Mail} from "lucide-react";
 
 export function Socials() {
   return (
-    <div className="fixed bottom-0 left-1/2 -translate-x-1/2 flex justify-center m-8 mb-0 ml-15">
-      <div className="flex items-center space-x-4 bg-[#181818] px-6 py-3 rounded-full shadow-lg">
+    <div className="grid">
+      <div>
         <a href="/" target="_blank" rel="noopener noreferrer">
-          <Home className="text-white hover:text-gray-400 transition" />
+          <Home className="text-white hover:text-gray-400"/>
         </a>
+      </div>   
+      <div>
         <a href="/blogs" target="_blank" rel="noopener noreferrer">
-          <FileText className="text-white hover:text-gray-400 transition" />
+          <FileText className="text-white hover:text-gray-400 transition"/>
         </a>
+      </div>
+      <div>
         <a href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer">
-          <Github className="text-white hover:text-gray-400 transition" />
+          <Github className="text-white hover:text-gray-400 `transition"/>
         </a>
+      </div>
+      <div>
         <a href="https://www.linkedin.com/in/aayushcodes" target="_blank" rel="noopener noreferrer">
           <Linkedin className="text-white hover:text-gray-400 transition" />
         </a>
+      </div>
+      <div>
         <a href="https://x.com/aayushk999" target="_blank" rel="noopener noreferrer">
           <X className="text-white hover:text-gray-400 transition" />
         </a>
+      </div>
+      <div>
         <a href="mailto:aayushk.dev@gmail.com">
           <Mail className="text-white hover:text-gray-400 transition" />
         </a>
       </div>
-    </div>
+      </div>
   );
 }
