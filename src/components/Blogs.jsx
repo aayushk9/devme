@@ -24,14 +24,14 @@ const blogs = [
 export function Blogs() {
     return (
         <section className="max-w-[600px] mx-auto text-left mt-10">
-            <h2 className="text-white text-2xl font-semibold">blog</h2>
+            <h2 className="text-black text-2xl font-semibold">blog</h2>
             <div className="grid md:grid-cols-1 gap-4 px-4 max-w-5xl mx-auto mt-6">
                 {blogs.map((blog, index) => (
                     <div key={index} className="space-y-1">
                         <a href={blog.website} className="block">
-                            <p className="text-white text-sm">{blog.title}</p>
+                            <p className="text-black text-sm">{blog.title}</p>
                         </a>
-                        <p className="text-gray-400 text-xs">{blog.date}</p>
+                        <p className="text-black text-xs">{blog.date}</p>
                     </div>
                 ))}
             </div>
