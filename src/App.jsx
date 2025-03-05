@@ -15,7 +15,7 @@ function App() {
         <Route path='/'
           element={
             <>
-              <div className='text-center min-h-screen w-full pb-40'>
+              <div className='text-center min-h-screen pb-40'>
                 <Intro />
                 <About />
                 <Edu />
@@ -36,5 +36,4 @@ function App() {
     </BrowserRouter>
   )
 }
-
 export default App
