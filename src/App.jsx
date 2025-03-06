@@ -29,7 +29,6 @@ function App() {
         <Route path='/blogs' element={
           <>
           <Blogs/>
-          <Socials/>
           </>
         }></Route>
       </Routes>
